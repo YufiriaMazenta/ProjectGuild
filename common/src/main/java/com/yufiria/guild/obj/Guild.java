@@ -1,4 +1,4 @@
-package com.yufiria.guild.common;
+package com.yufiria.guild.obj;
 
 import java.util.Map;
 import java.util.UUID;

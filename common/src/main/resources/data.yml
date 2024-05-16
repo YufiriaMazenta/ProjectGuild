@@ -1,0 +1,14 @@
+#允许文件存储、sqlite存储和mysql存储
+type: mysql
+#mysql相关配置
+mysql:
+  driver: com.mysql.cj.jdbc.Driver
+  url: 'jdbc:mysql://localhost:3306/guild'
+  username: root
+  password: 123456
+  hikari:
+    connection-timeout: 3000
+    min-idle: 10
+    max-life-time: 3000
+    max-pool-size: 50
+    auto-commit: true
