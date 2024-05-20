@@ -1,4 +1,4 @@
-package com.yufiria.guild.obj;
+package com.yufiria.guild.common.obj;
 
 public class GuildJob {
 

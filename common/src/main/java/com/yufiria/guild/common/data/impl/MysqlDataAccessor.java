@@ -1,10 +1,10 @@
-package com.yufiria.guild.data.impl;
+package com.yufiria.guild.common.data.impl;
 
-import com.yufiria.guild.data.DataAccessor;
-import com.yufiria.guild.data.MysqlConfig;
-import com.yufiria.guild.obj.Guild;
-import com.yufiria.guild.obj.GuildJob;
-import com.yufiria.guild.obj.GuildMember;
+import com.yufiria.guild.common.data.DataAccessor;
+import com.yufiria.guild.common.data.MysqlConfig;
+import com.yufiria.guild.common.obj.Guild;
+import com.yufiria.guild.common.obj.GuildJob;
+import com.yufiria.guild.common.obj.GuildMember;
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
 

@@ -1,4 +1,4 @@
-package com.yufiria.guild.data;
+package com.yufiria.guild.common.data;
 
 public class MysqlConfig {
 

@@ -1,6 +1,4 @@
-package com.yufiria.guild.obj;
-
-import com.yufiria.guild.ProjectGuild;
+package com.yufiria.guild.common.obj;
 
 import java.util.UUID;
 

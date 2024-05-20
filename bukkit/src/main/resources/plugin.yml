@@ -1,5 +1,5 @@
 name: ProjectGuild
 version: '${version}'
-main: com.yufiria.guild.ProjectGuild
+main: com.yufiria.guild.bukkit.ProjectGuildBukkit
 api-version: '1.13'
 description: 公会插件，名字暂未定

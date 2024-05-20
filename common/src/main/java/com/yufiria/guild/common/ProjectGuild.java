@@ -1,6 +1,6 @@
-package com.yufiria.guild;
+package com.yufiria.guild.common;
 
-import com.yufiria.guild.data.DataAccessor;
+import com.yufiria.guild.common.data.DataAccessor;
 
 public class ProjectGuild {
 

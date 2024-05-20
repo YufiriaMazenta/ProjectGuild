@@ -1,4 +1,4 @@
-package com.yufiria.guild;
+package com.yufiria.guild.bukkit;
 
 import crypticlib.BukkitPlugin;
 
