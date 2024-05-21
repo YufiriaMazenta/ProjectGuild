@@ -1,10 +1,13 @@
 package com.yufiria.guild.common.obj;
 
+import java.util.List;
+
 public class GuildJob {
 
     private String id;
     private String displayName;
     private Integer priority;
+    private List<String> permissions;
 
     public GuildJob(String id, String displayName, Integer priority) {
         this.id = id;

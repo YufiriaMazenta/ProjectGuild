@@ -1,0 +1,25 @@
+guild-configs:
+  max-member: 20
+  default-guild-name: %player_name%'s guild
+  default-member-job: member
+job-configs:
+  leader:
+    name: Guild Leader
+    priority: 99999
+    permissions:
+      - all
+  vice-leader:
+    name: Guild Vice Leader
+    priority: 99998
+    permissions:
+      - change-name
+      - change-description
+      - kick.member
+      - set-job.member
+      - invite
+      - accept-join-request
+  member:
+    name: Guild Member
+    priority: 0
+    permissions:
+      - invite

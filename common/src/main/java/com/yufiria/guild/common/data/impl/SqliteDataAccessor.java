@@ -29,12 +29,17 @@ public class SqliteDataAccessor implements DataAccessor {
     }
 
     @Override
-    public void changeGuildName(Guild guild, String newName) {
+    public void setGuildName(Guild guild, String newName) {
 
     }
 
     @Override
-    public void changeGuildDescription(Guild guild, String newDescription) {
+    public void setGuildDescription(Guild guild, String newDescription) {
+
+    }
+
+    @Override
+    public void setMemberName(GuildMember guildMember, String newName) {
 
     }
 

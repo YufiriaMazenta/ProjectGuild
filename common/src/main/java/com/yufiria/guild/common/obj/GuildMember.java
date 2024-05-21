@@ -1,5 +1,7 @@
 package com.yufiria.guild.common.obj;
 
+import com.yufiria.guild.common.ProjectGuild;
+
 import java.util.UUID;
 
 public class GuildMember {
@@ -33,8 +35,11 @@ public class GuildMember {
         return name;
     }
 
-    public GuildMember setName(String name) {
+    public GuildMember setName(String name, boolean saveData) {
         this.name = name;
+        if (saveData) {
+            ProjectGuild.getDataAccessor().setMemberName(this, name);
+        }
         return this;
     }
 
@@ -42,8 +47,11 @@ public class GuildMember {
         return job;
     }
 
-    public GuildMember setJob(GuildJob job) {
+    public GuildMember setJob(GuildJob job, boolean saveData) {
         this.job = job;
+        if (saveData) {
+            ProjectGuild.getDataAccessor().setMemberJob(this, job);
+        }
         return this;
     }
 }

@@ -16,9 +16,11 @@ public interface DataAccessor {
 
     void removeMember(Guild guild, UUID playerId);
 
-    void changeGuildName(Guild guild, String newName);
+    void setGuildName(Guild guild, String newName);
 
-    void changeGuildDescription(Guild guild, String newDescription);
+    void setGuildDescription(Guild guild, String newDescription);
+
+    void setMemberName(GuildMember guildMember, String newName);
 
     void setMemberJob(GuildMember guild, GuildJob job);
 

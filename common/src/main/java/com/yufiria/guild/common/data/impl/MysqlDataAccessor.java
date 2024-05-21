@@ -1,7 +1,7 @@
 package com.yufiria.guild.common.data.impl;
 
 import com.yufiria.guild.common.data.DataAccessor;
-import com.yufiria.guild.common.data.MysqlConfig;
+import com.yufiria.guild.common.data.MysqlProp;
 import com.yufiria.guild.common.obj.Guild;
 import com.yufiria.guild.common.obj.GuildJob;
 import com.yufiria.guild.common.obj.GuildMember;
@@ -22,7 +22,15 @@ public class MysqlDataAccessor implements DataAccessor {
     }
 
     private void createDataTables() {
-
+        try (Connection conn = getConnection()) {
+            if (conn == null) {
+                throw new SQLException("Connection is null");
+            }
+            conn.prepareStatement( "create table if not exists `guild_info`(`guild_id` varchar(36), `guild_name` varchar(100), `guild_desc` varchar(255), primary key (guild_id)) engine = InnoDB;");
+            //TODO
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
     }
 
     @Override
@@ -32,15 +40,15 @@ public class MysqlDataAccessor implements DataAccessor {
             hikariDataSource.close();
         }
         HikariConfig config = new HikariConfig();
-        config.setDriverClassName(MysqlConfig.driverClass);
-        config.setConnectionTimeout(MysqlConfig.connectionTimeout);
-        config.setMinimumIdle(MysqlConfig.minIdle);
-        config.setMaximumPoolSize(MysqlConfig.maxPoolSize);
-        config.setMaxLifetime(MysqlConfig.maxLifeTime);
-        config.setAutoCommit(MysqlConfig.autoCommit);
-        config.setJdbcUrl(MysqlConfig.url);
-        config.setUsername(MysqlConfig.username);
-        config.setPassword(MysqlConfig.password);
+        config.setDriverClassName(MysqlProp.driverClass);
+        config.setConnectionTimeout(MysqlProp.connectionTimeout);
+        config.setMinimumIdle(MysqlProp.minIdle);
+        config.setMaximumPoolSize(MysqlProp.maxPoolSize);
+        config.setMaxLifetime(MysqlProp.maxLifeTime);
+        config.setAutoCommit(MysqlProp.autoCommit);
+        config.setJdbcUrl(MysqlProp.url);
+        config.setUsername(MysqlProp.username);
+        config.setPassword(MysqlProp.password);
         hikariDataSource = new HikariDataSource(config);
     }
 
@@ -65,12 +73,17 @@ public class MysqlDataAccessor implements DataAccessor {
     }
 
     @Override
-    public void changeGuildName(Guild guild, String newName) {
+    public void setGuildName(Guild guild, String newName) {
 
     }
 
     @Override
-    public void changeGuildDescription(Guild guild, String newDescription) {
+    public void setGuildDescription(Guild guild, String newDescription) {
+
+    }
+
+    @Override
+    public void setMemberName(GuildMember guildMember, String newName) {
 
     }
 

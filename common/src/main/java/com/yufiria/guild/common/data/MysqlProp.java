@@ -1,6 +1,6 @@
 package com.yufiria.guild.common.data;
 
-public class MysqlConfig {
+public class MysqlProp {
 
     //HikariCP配置
     public static String driverClass = "com.mysql.cj.jdbc.Driver";

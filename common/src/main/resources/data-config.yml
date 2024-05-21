@@ -2,7 +2,6 @@
 type: mysql
 #mysql相关配置
 mysql:
-  driver: com.mysql.cj.jdbc.Driver
   url: 'jdbc:mysql://localhost:3306/guild'
   username: root
   password: 123456
